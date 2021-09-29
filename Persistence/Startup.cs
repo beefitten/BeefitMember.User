@@ -1,12 +1,20 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Persistence.Repositories;
+using Persistence.Settings;
 
 namespace Persistence
 {
-    static class Startup
+    public static class Startup
     {
-        static void Main(string[] args)
+        public static ServiceProvider SetupDependencies()
         {
-            Console.WriteLine("Hello World!");
+            var serviceProvider = new ServiceCollection()
+                .AddLogging()
+                .AddSingleton<IDatabaseSettings, DatabaseSettings>()
+                .AddSingleton<ITestRepository, TestRepository>()
+                .BuildServiceProvider();
+
+            return serviceProvider;
         }
     }
 }
