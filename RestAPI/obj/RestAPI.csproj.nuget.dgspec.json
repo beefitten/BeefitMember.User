@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj": {}
+    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj": {}
   },
   "projects": {
-    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj": {
+    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj",
-        "projectName": "Persistence",
-        "projectPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj",
+        "projectUniqueName": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
+        "projectName": "RestAPI",
+        "projectPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
         "packagesPath": "/Users/nikolajhuynh/.nuget/packages/",
-        "outputPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/obj/",
+        "outputPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nikolajhuynh/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -48,6 +54,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
