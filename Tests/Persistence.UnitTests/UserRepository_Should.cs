@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AutoFixture.Xunit2;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Models.User;
@@ -28,6 +27,10 @@ namespace Tests.Persistence.UnitTests
             
             Assert.NotNull(response);
             Assert.Equal(userModel.Email, response.Email);
+            Assert.Equal(userModel.Fitness, response.Fitness);
+            Assert.Equal(userModel.Password, response.Password);
+            Assert.Equal(userModel.Name, response.Name);
+            Assert.Equal(userModel.Surname, response.Surname);
         }
     }
 }

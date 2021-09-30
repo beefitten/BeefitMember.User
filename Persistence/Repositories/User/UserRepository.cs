@@ -8,14 +8,14 @@ namespace Persistence.Repositories.User
 {
     public class UserRepository : IUserRepository
     {
-        private readonly IMongoCollection<UserModel> _test;
+        private readonly IMongoCollection<UserModel> _userCollection;
 
         public UserRepository(IDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _test = database.GetCollection<UserModel>(settings.CollectionName);
+            _userCollection = database.GetCollection<UserModel>(settings.CollectionName);
         }
         
         public Task<UserModel> Login(string username, string password)
@@ -28,16 +28,16 @@ namespace Persistence.Repositories.User
             if (model == null)
                 throw new Exception("Model is null");
             
-            await _test.InsertOneAsync(model);
+            await _userCollection.InsertOneAsync(model);
             return model;
         }
         
         public async Task<UserModel> FindUser(string email) =>
-            await _test
+            await _userCollection
                 .Find<UserModel>(user => user.Email == email)
                 .FirstOrDefaultAsync();
         
         public async Task RemoveUser(string email) => 
-            await _test.DeleteOneAsync(e => e.Email == email);
+            await _userCollection.DeleteOneAsync(e => e.Email == email);
     }
 }
