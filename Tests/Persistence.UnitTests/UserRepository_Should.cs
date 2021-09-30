@@ -27,10 +27,10 @@ namespace Tests.Persistence.UnitTests
             
             Assert.NotNull(response);
             Assert.Equal(userModel.Email, response.Email);
-            Assert.Equal(userModel.Fitness, response.Fitness);
             Assert.Equal(userModel.Password, response.Password);
             Assert.Equal(userModel.Name, response.Name);
             Assert.Equal(userModel.Surname, response.Surname);
+            Assert.Equal(userModel.Fitness, response.Fitness);
         }
     }
 }
