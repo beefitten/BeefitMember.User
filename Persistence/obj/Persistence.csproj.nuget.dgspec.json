@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/Persistence/Persistence.csproj": {}
+    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj": {}
   },
   "projects": {
-    "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/Persistence/Persistence.csproj": {
+    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/Persistence/Persistence.csproj",
+        "projectUniqueName": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/Persistence/Persistence.csproj",
-        "packagesPath": "/Users/alexandermolholm/.nuget/packages/",
-        "outputPath": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/Persistence/obj/",
+        "projectPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/Persistence.csproj",
+        "packagesPath": "/Users/nikolajhuynh/.nuget/packages/",
+        "outputPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexandermolholm/.nuget/NuGet/NuGet.Config"
+          "/Users/nikolajhuynh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -37,6 +37,44 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.13.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }
