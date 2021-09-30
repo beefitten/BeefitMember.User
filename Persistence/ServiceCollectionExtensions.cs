@@ -4,7 +4,7 @@ using Persistence.Settings;
 
 namespace Persistence
 {
-    public static clasServiceCollectionExtensions
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services)
         {
