@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj": {}
+    "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/RestAPI/RestAPI.csproj": {}
   },
   "projects": {
-    "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj": {
+    "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/RestAPI/RestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
+        "projectUniqueName": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/RestAPI/RestAPI.csproj",
         "projectName": "RestAPI",
-        "projectPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
-        "packagesPath": "/Users/nikolajhuynh/.nuget/packages/",
-        "outputPath": "/Users/nikolajhuynh/Documents/Bachelor/BeefitMember.User/RestAPI/obj/",
+        "projectPath": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/RestAPI/RestAPI.csproj",
+        "packagesPath": "/Users/alexandermolholm/.nuget/packages/",
+        "outputPath": "/Users/alexandermolholm/Documents/IKT/7.Semester/Bachelorprojekt/Repos/BeefitMember.User/RestAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nikolajhuynh/.nuget/NuGet/NuGet.Config"
+          "/Users/alexandermolholm/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.300/RuntimeIdentifierGraph.json"
         }
       }
     }
