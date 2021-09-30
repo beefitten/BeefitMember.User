@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Configuration;
+using System.Threading.Tasks;
 using AutoFixture.Xunit2;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Models.User;

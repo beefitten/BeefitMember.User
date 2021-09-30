@@ -10,3 +10,4 @@ D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Persistence\obj\Debug\net5.0
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Persistence\obj\Debug\net5.0\Persistence.dll
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Persistence\obj\Debug\net5.0\ref\Persistence.dll
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Persistence\obj\Debug\net5.0\Persistence.pdb
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Persistence\bin\Debug\net5.0\appsettings.json
