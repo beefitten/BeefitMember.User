@@ -145,3 +145,10 @@ D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Micro
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Domain.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Domain.pdb
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\BCrypt.Net-Next.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Tests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

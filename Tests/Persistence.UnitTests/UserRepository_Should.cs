@@ -28,9 +28,18 @@ namespace Tests.Persistence.UnitTests
             Assert.NotNull(response);
             Assert.Equal(userModel.Email, response.Email);
             Assert.Equal(userModel.Password, response.Password);
+            Assert.Equal(userModel.Subscription, response.Subscription);
             Assert.Equal(userModel.Name, response.Name);
-            Assert.Equal(userModel.Surname, response.Surname);
-            Assert.Equal(userModel.Fitness, response.Fitness);
+            Assert.Equal(userModel.LastName, response.LastName);
+            Assert.Equal(userModel.PrimaryGym, response.PrimaryGym);
+            Assert.Equal(userModel.SecondaryGyms, response.SecondaryGyms);
+            Assert.Equal(userModel.Role, response.Role);
+            Assert.Equal(userModel.CardNumber, response.CardNumber);
+            Assert.Equal(userModel.ExpireYear, response.ExpireYear);
+            Assert.Equal(userModel.ExpireMonth, response.ExpireMonth);
+            Assert.Equal(userModel.CSC, response.CSC);
+            Assert.Equal(userModel.CardholderName, response.CardholderName);
+            Assert.Equal(userModel.Issuer, response.Issuer);
         }
     }
 }
