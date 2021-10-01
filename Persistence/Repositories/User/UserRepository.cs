@@ -18,18 +18,13 @@ namespace Persistence.Repositories.User
             _userCollection = database.GetCollection<UserModel>(settings.CollectionName);
         }
         
-        public Task<UserModel> Login(string username, string password)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public async Task<UserModel> Register(UserModel model)
+        public async Task<bool> Register(UserModel model)
         {
             if (model == null)
                 throw new Exception("Model is null");
             
             await _userCollection.InsertOneAsync(model);
-            return model;
+            return true;
         }
         
         public async Task<UserModel> FindUser(string email) =>

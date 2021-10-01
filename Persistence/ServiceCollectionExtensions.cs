@@ -9,8 +9,8 @@ namespace Persistence
         public static IServiceCollection AddPersistence(this IServiceCollection services)
         {
             services
-                .AddSingleton<IDatabaseSettings, UserSettings>()
-                .AddSingleton<IUserRepository, UserRepository>();
+                .AddTransient<IDatabaseSettings, UserSettings>()
+                .AddTransient<IUserRepository, UserRepository>();
 
             return services;
         }
