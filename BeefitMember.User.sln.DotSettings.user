@@ -6,6 +6,7 @@
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should.HashPassword_And_Return_True&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should.Register_And_Authenticate&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>

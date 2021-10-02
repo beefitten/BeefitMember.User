@@ -1,9 +1,10 @@
-using System;
+using System.Net;
 using System.Threading.Tasks;
 using Domain.Services.Users;
 using Domain.Services.Users.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Persistence.Models.User;
 
 namespace RestAPI.Controllers
 {
@@ -19,16 +20,10 @@ namespace RestAPI.Controllers
         
         [HttpPost]
         [Route("/register")]
-        public async Task<IActionResult> RegisterUser([FromBody] RegisterModel model)
+        public async Task<HttpStatusCode> RegisterUser([FromBody] RegisterModel model)
         {
-            var response = await _userService.Register(model);
-            
-            if (response)
-                return Ok();
-
-            return Problem();
+            return await _userService.Register(model);
         }
-        
         
         [HttpPost]
         [Route("/login")]
@@ -40,25 +35,17 @@ namespace RestAPI.Controllers
         [HttpGet]
         [Authorize]
         [Route("/getUserInfo")]
-        public async Task<string> GetUserInforation()
+        public async Task<UserReturnModel> GetUserInforation(string email)
         {
-            return "Jeg har lyst til øl :)";
+            return await _userService.FindUserInformation(email);
         }
 
         [HttpDelete]
         [Authorize(Roles = "Admin")]
         [Route("/deleteUser")]
-        public async Task<string> DeleteUserInformation()
+        public async Task<HttpStatusCode> DeleteUserInformation(string email)
         {
-            return "Du har admin rollen";
-        }
-
-        [HttpPatch]
-        [Authorize(Roles = "Admin")]
-        [Route("/updateUser")]
-        public async Task UpdateUserInformation()
-        {
-            throw new NotImplementedException();
+            return await _userService.RemoveUser(email);
         }
 
         public class LoginRequest

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace Domain.Services.Users
             _userRepository = fixture.ServiceProvider.GetService<IUserRepository>();
         }
         
-        public async Task<bool> Register(RegisterModel model)
+        public async Task<HttpStatusCode> Register(RegisterModel model)
         {
             var userModel = new UserModel
             {
@@ -54,14 +55,24 @@ namespace Domain.Services.Users
 
         public async Task<string> Authenticate(string email, string password)
         {
-            var account = await _userRepository.FindUser(email) ?? throw new Exception("User not  found");
+            var account = await _userRepository.FindUser(email) ?? throw new Exception("User not found!");
 
             var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
             
             if (authenticateResult)
                 return GenerateToken(email, account.Role);
 
-            return "false";
+            return "Password is incorrect.";
+        }
+
+        public async Task<UserReturnModel> FindUserInformation(string email)
+        {
+            return await _userRepository.FindUserInformation(email);
+        }
+
+        public async Task<HttpStatusCode> RemoveUser(string email)
+        {
+            return await _userRepository.RemoveUser(email);
         }
 
         private string EncryptPassword(string password)

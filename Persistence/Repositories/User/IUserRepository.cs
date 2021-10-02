@@ -1,12 +1,14 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using Persistence.Models.User;
 
 namespace Persistence.Repositories.User
 {
     public interface IUserRepository
     {
-        Task<bool> Register(UserModel model);
+        Task<HttpStatusCode> Register(UserModel model);
         Task<UserModel> FindUser(string email);
-        Task RemoveUser(string email);
+        Task<UserReturnModel> FindUserInformation(string email);
+        Task<HttpStatusCode> RemoveUser(string email);
     }
 }

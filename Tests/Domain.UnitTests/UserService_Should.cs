@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using AutoFixture.Xunit2;
 using Domain.Services.Users;
 using Domain.Services.Users.Models;
@@ -22,8 +23,7 @@ namespace Tests.Domain.UnitTests
         public async Task HashPassword_And_Return_True(RegisterModel model)
         {
             var response = await _userService.Register(model);
-            
-            Assert.True(response);
+            Assert.Equal(HttpStatusCode.OK, response);
         }
 
         [Theory, AutoData]
@@ -31,7 +31,7 @@ namespace Tests.Domain.UnitTests
         {
             var registerResult = await _userService.Register(model);
             
-            Assert.True(registerResult);
+            Assert.Equal(HttpStatusCode.OK, registerResult);
         
             var loginResult = await _userService.Authenticate(model.Email, model.Password);
             
