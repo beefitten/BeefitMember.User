@@ -76,7 +76,6 @@ namespace RestAPI
                 {
                     jwtOptions.TokenValidationParameters = new TokenValidationParameters()
                     {
-                        // The SigningKey is defined in the TokenController class
                         IssuerSigningKey = UserService.SIGNING_KEY,
                         ValidateIssuer = false,
                         ValidateAudience = false,

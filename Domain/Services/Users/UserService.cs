@@ -7,6 +7,7 @@ using Domain.Services.Users.Models;
 using Domain.Setup;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Persistence;
 using Persistence.Models.User;
 using Persistence.Repositories.User;
 
@@ -15,12 +16,11 @@ namespace Domain.Services.Users
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        
-        // Todo: Hide all this secrets
-        private const string SECRET_KEY = "TQvgjeABMPOwCycOqah5EQu5yyVjpmVG";
+
+        private static readonly string SECRET_KEY = AppConfig.GetSecretKey();
         public static readonly SymmetricSecurityKey SIGNING_KEY = new
             SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
-        
+            
         public UserService()
         {
             var fixture = new TextFixtureData();
@@ -59,7 +59,7 @@ namespace Domain.Services.Users
             var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
             
             if (authenticateResult)
-                return GenerateToken(email);
+                return GenerateToken(email, account.Role);
 
             return "false";
         }
@@ -70,10 +70,13 @@ namespace Domain.Services.Users
             return BCrypt.Net.BCrypt.HashPassword(password, salt);
         }
 
-        private string GenerateToken(string username)
+        private string GenerateToken(string username, string role)
         {
             var token = new JwtSecurityToken(
-                claims:    new Claim[] { new Claim(ClaimTypes.Name, username) },
+                claims:    new Claim[] { 
+                    new Claim(ClaimTypes.Name, username), 
+                    new Claim(ClaimTypes.Role, role)
+                },
                 notBefore: new DateTimeOffset(DateTime.Now).DateTime,
                 expires:   new DateTimeOffset(DateTime.Now.AddMinutes(60)).DateTime,
                 signingCredentials: new SigningCredentials(SIGNING_KEY,

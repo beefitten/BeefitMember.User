@@ -16,11 +16,10 @@ namespace RestAPI.Controllers
         {
             _userService = userService; 
         }
-
-        // TODO: Lav input om fra URL til body
+        
         [HttpPost]
         [Route("/register")]
-        public async Task<IActionResult> RegisterUser(RegisterModel model)
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterModel model)
         {
             var response = await _userService.Register(model);
             
@@ -33,9 +32,9 @@ namespace RestAPI.Controllers
         
         [HttpPost]
         [Route("/login")]
-        public async Task<string> Login(string email, string password)
+        public async Task<string> Login([FromBody] LoginRequest request)
         {
-            return await _userService.Authenticate(email, password);
+            return await _userService.Authenticate(request.Email, request.Password);
         }
 
         [HttpGet]
@@ -47,20 +46,25 @@ namespace RestAPI.Controllers
         }
 
         [HttpDelete]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [Route("/deleteUser")]
-        public async Task DeleteUserInformation()
+        public async Task<string> DeleteUserInformation()
         {
-            throw new NotImplementedException();
+            return "Du har admin rollen";
         }
 
         [HttpPatch]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [Route("/updateUser")]
         public async Task UpdateUserInformation()
         {
             throw new NotImplementedException();
         }
-       
+
+        public class LoginRequest
+        {
+            public string Email { get; set; }
+            public string Password { get; set; }
+        }
     }
 }
