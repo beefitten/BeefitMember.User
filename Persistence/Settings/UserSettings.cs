@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-
-namespace Persistence.Settings
+﻿namespace Persistence.Settings
 {
     public class UserSettings : IDatabaseSettings
     {

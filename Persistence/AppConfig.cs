@@ -13,5 +13,13 @@ namespace Persistence
                 .Build();
             return configuration.GetSection("ConnectionStrings").GetSection("ConString").Value;
         }
+        
+        public static string GetSecretKey()
+        {
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"), optional: false)
+                .Build();
+            return configuration.GetSection("SecretKey").GetSection("Key").Value;
+        }
     }
 }
