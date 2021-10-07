@@ -5,7 +5,16 @@
 
 trigger:
 - main
-
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1 (1a3b2a25-a8e4-4327-8346-3d4dae471f32)'
+    appType: 'webApp'
+    WebAppName: 'BeefitMemberUser'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'appsvc_linux_centralus'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 pool:
   vmImage: 'windows-latest'
 
