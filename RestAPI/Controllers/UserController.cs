@@ -1,10 +1,13 @@
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Domain.Services.FitnessPackage;
 using Domain.Services.Users;
 using Domain.Services.Users.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Models.User;
+using UserReturnModel = Persistence.Models.User.UserReturnModel;
 
 namespace RestAPI.Controllers
 {
@@ -13,9 +16,12 @@ namespace RestAPI.Controllers
     public class UserController : Controller
     {
         private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        private readonly IFitnessPackageClient _client;
+        
+        public UserController(IUserService userService, IFitnessPackageClient client)
         {
-            _userService = userService; 
+            _userService = userService;
+            _client = client;
         }
         
         [HttpPost]
@@ -32,9 +38,28 @@ namespace RestAPI.Controllers
             return await _userService.Authenticate(request.Email, request.Password);
         }
 
+        [HttpPost]
+        [Route("/memberLogin")]
+        public async Task<IActionResult> MemberLogin([FromBody] LoginRequest request)
+        {
+            var token = await _userService.Authenticate(request.Email, request.Password);
+
+            if (token == UserServiceResults.IncorrectPassword.ToString())
+                return Unauthorized();
+
+            if (token == UserServiceResults.Error.ToString())
+                return Conflict();
+            
+            var userInformation = await _userService.FindUserInformation(request.Email);
+
+            var fitnessInformation = await _client.GetFitnessPackage(userInformation.PrimaryGym, token);
+
+            return Ok(fitnessInformation);
+        }
+
         [HttpGet]
         [Authorize]
-        [Route("/getUserInfo")]
+        [Route("/getUserInfo/{email}")]
         public async Task<UserReturnModel> GetUserInforation(string email)
         {
             return await _userService.FindUserInformation(email);

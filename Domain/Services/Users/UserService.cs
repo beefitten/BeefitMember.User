@@ -22,10 +22,9 @@ namespace Domain.Services.Users
         public static readonly SymmetricSecurityKey SIGNING_KEY = new
             SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
             
-        public UserService()
+        public UserService(IUserRepository userRepository)
         {
-            var fixture = new TextFixtureData();
-            _userRepository = fixture.ServiceProvider.GetService<IUserRepository>();
+            _userRepository = userRepository;
         }
         
         public async Task<HttpStatusCode> Register(RegisterModel model)
@@ -55,14 +54,23 @@ namespace Domain.Services.Users
 
         public async Task<string> Authenticate(string email, string password)
         {
-            var account = await _userRepository.FindUser(email) ?? throw new Exception("User not found!");
-
+            UserModel account = null; 
+            
+            try
+            {
+                account = await _userRepository.FindUser(email) ?? throw new Exception("User not found!");
+            }
+            catch (Exception e)
+            {
+                return UserServiceResults.Error.ToString();
+            }
+            
             var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
             
             if (authenticateResult)
                 return GenerateToken(email, account.Role);
 
-            return "Password is incorrect.";
+            return UserServiceResults.IncorrectPassword.ToString();
         }
 
         public async Task<UserReturnModel> FindUserInformation(string email)
