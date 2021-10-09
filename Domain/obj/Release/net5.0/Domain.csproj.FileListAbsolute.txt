@@ -1,0 +1,16 @@
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.csprojAssemblyReference.cache
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.AssemblyInfoInputs.cache
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.AssemblyInfo.cs
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\appsettings.json
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\Domain.deps.json
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\Domain.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\ref\Domain.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\Domain.pdb
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\Persistence.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Release\net5.0\Persistence.pdb
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.csproj.CopyComplete
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\ref\Domain.dll
+D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Release\net5.0\Domain.pdb

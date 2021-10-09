@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Services.Users;
+using Domain.Setup;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Persistence;
 using RestAPI.Controllers;
 using RestAPI.Setup;
 
@@ -65,7 +67,8 @@ namespace RestAPI
             });
 
             services.AddRestAPI();
-            
+            services.AddDomain();
+            services.AddPersistence();
 
             services.AddAuthentication(options =>
                 {
@@ -89,12 +92,12 @@ namespace RestAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+            // if (env.IsDevelopment())
+            // {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/BeefitMemberuser/swagger.json", "BeefitMember User"));
-            }
+            // }
             
             app.UseAuthentication();
             
