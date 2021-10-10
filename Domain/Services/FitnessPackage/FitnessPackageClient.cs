@@ -16,28 +16,29 @@ namespace Domain.Services.FitnessPackage
             });
 
             client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-            
-            var response = await client.GetAsync($"https://beefitmemberfitnesspackage.azurewebsites.net/getFitnessPackage/{fitnessName}");
-            var content = await response.Content.ReadAsStringAsync();
-            
-            Console.WriteLine(content);
-            
-            FitnessPackageReturnModel json = JsonConvert.DeserializeObject<FitnessPackageReturnModel>(content);
-            
-            if (json == null)
-                throw new Exception("Request to FitnessPackage failed!");
-            
-            var model = new FitnessModel()
-            {
-                Token = token,
-                Name = json.Name,
-                Logo = json.Logo,
-                Features = json.Features,
-                PrimaryColor = json.PrimaryColor,
-                SecondaryColor = json.SecondaryColor
-            };
 
-            return model;
+            try
+            {
+                var response = await client.GetAsync($"https://beefitmemberfitnesspackage.azurewebsites.net/getFitnessPackage/{fitnessName}");
+                var content = await response.Content.ReadAsStringAsync();
+                FitnessPackageReturnModel json = JsonConvert.DeserializeObject<FitnessPackageReturnModel>(content);
+                
+                var model = new FitnessModel()
+                {
+                    Token = token,
+                    Name = json.Name,
+                    Logo = json.Logo,
+                    Features = json.Features,
+                    PrimaryColor = json.PrimaryColor,
+                    SecondaryColor = json.SecondaryColor
+                };
+
+                return model;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
     }
 }

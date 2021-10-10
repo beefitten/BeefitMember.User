@@ -54,6 +54,9 @@ namespace RestAPI.Controllers
 
             var fitnessInformation = await _client.GetFitnessPackage(userInformation.PrimaryGym, token);
 
+            if (fitnessInformation == null)
+                return Conflict();
+            
             return Ok(fitnessInformation);
         }
 
