@@ -66,7 +66,7 @@ namespace Domain.Services.Users
             }
             
             var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
-            
+
             if (authenticateResult)
                 return GenerateToken(email, account.Role);
 
