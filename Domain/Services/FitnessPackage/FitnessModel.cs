@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Persistence.Models.FitnessPackage;
+using Persistence.Models.User;
 
 namespace Domain.Services.FitnessPackage
 {
@@ -11,5 +12,6 @@ namespace Domain.Services.FitnessPackage
         public string SecondaryColor { get; set; }
         public string Logo { get; set; }
         public List<Features> Features { get; set; }
+        public UserReturnModel UserInfo { get; set; }
     }
 }

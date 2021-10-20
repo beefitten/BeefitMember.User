@@ -53,9 +53,11 @@ namespace RestAPI.Controllers
             var userInformation = await _userService.FindUserInformation(request.Email);
 
             var fitnessInformation = await _client.GetFitnessPackage(userInformation.PrimaryGym, token);
-
+            
             if (fitnessInformation == null)
                 return Conflict();
+
+            fitnessInformation.UserInfo = userInformation;
             
             return Ok(fitnessInformation);
         }
