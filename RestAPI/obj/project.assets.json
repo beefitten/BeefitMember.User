@@ -7676,19 +7676,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jonas\\.nuget\\packages\\": {}
+    "/Users/thanhpham/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\RestAPI\\RestAPI.csproj",
+      "projectUniqueName": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\RestAPI\\RestAPI.csproj",
-      "packagesPath": "C:\\Users\\Jonas\\.nuget\\packages\\",
-      "outputPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\RestAPI\\obj\\",
+      "projectPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/RestAPI/RestAPI.csproj",
+      "packagesPath": "/Users/thanhpham/.nuget/packages/",
+      "outputPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/RestAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jonas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/thanhpham/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7700,8 +7700,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Domain\\Domain.csproj"
+            "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/Domain.csproj": {
+              "projectPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/Domain.csproj"
             }
           }
         }
@@ -7763,7 +7763,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Jonas\\.dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

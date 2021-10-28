@@ -8256,19 +8256,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jonas\\.nuget\\packages\\": {}
+    "/Users/thanhpham/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Tests\\Tests.csproj",
+      "projectUniqueName": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Tests/Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\Jonas\\.nuget\\packages\\",
-      "outputPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Tests\\obj\\",
+      "projectPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Tests/Tests.csproj",
+      "packagesPath": "/Users/thanhpham/.nuget/packages/",
+      "outputPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jonas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/thanhpham/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8280,11 +8280,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Domain\\Domain.csproj"
+            "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/Domain.csproj": {
+              "projectPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/Domain.csproj"
             },
-            "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Skole\\7. semester\\Bachelor\\Git\\BeefitMember.User\\Persistence\\Persistence.csproj"
+            "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Persistence/Persistence.csproj": {
+              "projectPath": "/Users/thanhpham/Documents/bachelor/BeefitMember.User/Persistence/Persistence.csproj"
             }
           }
         }
@@ -8347,7 +8347,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Jonas\\.dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -1,16 +1,32 @@
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\appsettings.json
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\Domain.deps.json
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\Domain.dll
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\ref\Domain.dll
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\Domain.pdb
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\Persistence.dll
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\bin\Debug\net5.0\Persistence.pdb
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.csproj.CopyComplete
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.dll
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\ref\Domain.dll
-D:\Skole\7. semester\Bachelor\Git\BeefitMember.User\Domain\obj\Debug\net5.0\Domain.pdb
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/appsettings.json
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.deps.json
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.dll
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/ref/Domain.dll
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.pdb
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/Persistence.dll
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/bin/Debug/net5.0/Persistence.pdb
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csprojAssemblyReference.cache
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csproj.CopyComplete
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.dll
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/ref/Domain.dll
+D:/Skole/7. semester/Bachelor/Git/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.pdb
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/appsettings.json
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.dll
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/Persistence.dll
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/bin/Debug/net5.0/Persistence.pdb
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csprojAssemblyReference.cache
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.csproj.CopyComplete
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.dll
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/thanhpham/Documents/bachelor/BeefitMember.User/Domain/obj/Debug/net5.0/Domain.pdb
