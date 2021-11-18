@@ -59,6 +59,7 @@ namespace Persistence.Repositories.User
                 Subscription = model.Subscription,
                 Name = model.Name,
                 LastName = model.LastName,
+                ProfileImage = model.ProfileImage,
                 PrimaryGym = model.PrimaryGym,
                 SecondaryGyms = model.SecondaryGyms,
                 Role = model.Role,

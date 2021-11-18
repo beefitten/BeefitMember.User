@@ -13,7 +13,8 @@ namespace Domain.Setup
             services
                 .AddTransient<IUserService, UserService>()
                 .AddTransient<IUserRepository, UserRepository>()
-                .AddTransient<IFitnessPackageClient, FitnessPackageClient>();
+                .AddTransient<IFitnessPackageClient, FitnessPackageClient>()
+                .AddTransient<HttpClient>();
 
             return services;
         }

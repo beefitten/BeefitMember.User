@@ -9,6 +9,7 @@ namespace Persistence.Models.User
         public string Subscription { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
+        public string ProfileImage { get; set; }
         public string PrimaryGym { get; set; }
         public List<String> SecondaryGyms { get; set; }
         public string Role { get; set; }

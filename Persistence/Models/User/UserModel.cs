@@ -23,6 +23,9 @@ namespace Persistence.Models.User
         
         [BsonElement("Last Name")]
         public string LastName { get; set; }
+        
+        [BsonElement("ProfileImage")]
+        public string ProfileImage { get; set; }
 
         [BsonElement("Primary Gym")]
         public string PrimaryGym { get; set; }

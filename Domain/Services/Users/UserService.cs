@@ -36,6 +36,7 @@ namespace Domain.Services.Users
                 Subscription = model.Subscription,
                 Name = model.Name,
                 LastName = model.LastName,
+                ProfileImage = model.ProfileImage,
                 PrimaryGym = model.PrimaryGym,
                 SecondaryGyms = model.SecondaryGyms,
                 Role = model.Role.ToString(),
@@ -47,7 +48,7 @@ namespace Domain.Services.Users
                 Issuer = model.PaymentInfo.Issuer
             };
             
-            userModel.Password = EncryptPassword(model.Password);
+            userModel.Password = HashPassword(model.Password);
 
             return await _userRepository.Register(userModel);
         }
@@ -83,7 +84,7 @@ namespace Domain.Services.Users
             return await _userRepository.RemoveUser(email);
         }
 
-        private string EncryptPassword(string password)
+        private string HashPassword(string password)
         {
             var salt = BCrypt.Net.BCrypt.GenerateSalt(10);
             return BCrypt.Net.BCrypt.HashPassword(password, salt);
