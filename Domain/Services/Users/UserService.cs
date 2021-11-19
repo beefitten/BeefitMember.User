@@ -53,7 +53,7 @@ namespace Domain.Services.Users
             return await _userRepository.Register(userModel);
         }
 
-        public async Task<string> Authenticate(string email, string password)
+        public async Task<UserReturnModel> Authenticate(string email, string password)
         {
             UserModel account = null; 
             
@@ -63,15 +63,42 @@ namespace Domain.Services.Users
             }
             catch (Exception e)
             {
-                return UserServiceResults.Error.ToString();
+                return new UserReturnModel
+                {
+                    StatusCode = UserServiceResults.Error.ToString()
+                };
             }
             
             var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
-            
-            if (authenticateResult)
-                return GenerateToken(email, account.Role);
 
-            return UserServiceResults.IncorrectPassword.ToString();
+            if (authenticateResult)
+            {
+                var token = GenerateToken(email, account.Role);
+                
+                return new UserReturnModel
+                {
+                    StatusCode = UserServiceResults.OK.ToString(),
+                    Email = account.Email,
+                    Subscription = account.Subscription,
+                    Name = account.Name,
+                    LastName = account.LastName,
+                    ProfileImage = account.ProfileImage,
+                    PrimaryGym = account.PrimaryGym,
+                    SecondaryGyms = account.SecondaryGyms,
+                    Role = account.Role,
+                    CardNumber = account.CardNumber,
+                    ExpireYear = account.ExpireYear,
+                    ExpireMonth = account.ExpireMonth,
+                    CSC = account.CSC,
+                    CardholderName = account.CardholderName,
+                    Issuer = account.Issuer,
+                    Token = token
+                };
+            }
+            return new UserReturnModel
+            {
+                StatusCode = UserServiceResults.IncorrectPassword.ToString()
+            };
         }
 
         public async Task<UserReturnModel> FindUserInformation(string email)

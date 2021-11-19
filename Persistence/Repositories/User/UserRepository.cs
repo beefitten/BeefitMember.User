@@ -47,8 +47,8 @@ namespace Persistence.Repositories.User
                 throw new Exception("Email cannot be null!");
 
             var model = await _userCollection
-            .Find<UserModel>(user => user.Email == email)
-            .FirstOrDefaultAsync();
+                .Find<UserModel>(user => user.Email == email)
+                .FirstOrDefaultAsync();
 
             if (model == null)
                 throw new Exception("User not found");

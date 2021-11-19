@@ -3,6 +3,7 @@
     public enum UserServiceResults
     {
         IncorrectPassword,
-        Error
+        Error,
+        OK
     }
 }

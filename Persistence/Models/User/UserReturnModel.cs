@@ -5,6 +5,8 @@ namespace Persistence.Models.User
 {
     public class UserReturnModel
     {
+        public string StatusCode { get; set; }
+        
         public string Email { get; set; }
         public string Subscription { get; set; }
         public string Name { get; set; }
@@ -19,5 +21,6 @@ namespace Persistence.Models.User
         public int CSC { get; set; }
         public string CardholderName { get; set; }
         public string Issuer { get; set; }
+        public string Token { get; set; }
     }
 }

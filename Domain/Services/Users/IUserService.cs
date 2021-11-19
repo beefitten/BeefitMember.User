@@ -8,7 +8,7 @@ namespace Domain.Services.Users
     public interface IUserService
     {
         Task<HttpStatusCode> Register(RegisterModel model);
-        Task<string> Authenticate(string email, string password);
+        Task<UserReturnModel> Authenticate(string email, string password);
         Task<UserReturnModel> FindUserInformation(string email);
         Task<HttpStatusCode> RemoveUser(string email);
     }

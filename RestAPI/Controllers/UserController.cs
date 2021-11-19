@@ -33,31 +33,37 @@ namespace RestAPI.Controllers
         
         [HttpPost]
         [Route("/login")]
-        public async Task<string> Login([FromBody] LoginRequest request)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            return await _userService.Authenticate(request.Email, request.Password);
+            var response = await _userService.Authenticate(request.Email, request.Password);
+
+            if (response.StatusCode == UserServiceResults.Error.ToString())
+                return Conflict();
+
+            if (response.StatusCode == UserServiceResults.IncorrectPassword.ToString())
+                return NotFound();
+
+            return Ok(response);
         }
 
         [HttpPost]
         [Route("/memberLogin")]
         public async Task<IActionResult> MemberLogin([FromBody] LoginRequest request)
         {
-            var token = await _userService.Authenticate(request.Email, request.Password);
+            var user = await _userService.Authenticate(request.Email, request.Password);
 
-            if (token == UserServiceResults.IncorrectPassword.ToString())
-                return Unauthorized();
-
-            if (token == UserServiceResults.Error.ToString())
+            if (user.StatusCode == UserServiceResults.Error.ToString())
                 return Conflict();
-            
-            var userInformation = await _userService.FindUserInformation(request.Email);
 
-            var fitnessInformation = await _client.GetFitnessPackage(userInformation.PrimaryGym, token);
+            if (user.StatusCode == UserServiceResults.IncorrectPassword.ToString())
+                return NotFound();
+            
+            var fitnessInformation = await _client.GetFitnessPackage(user.PrimaryGym, user.Token);
             
             if (fitnessInformation == null)
                 return Conflict();
 
-            fitnessInformation.UserInfo = userInformation;
+            fitnessInformation.UserInfo = user;
             
             return Ok(fitnessInformation);
         }
