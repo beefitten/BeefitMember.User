@@ -14,11 +14,6 @@ namespace Domain.Services.FitnessPackage
         }
         public async Task<FitnessModel> GetFitnessPackage(string fitnessName, string token)
         {
-            // var httpClientHandler = new HttpClientHandler
-            // {
-            //     AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-            // };
-            //
             _client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
 
             try

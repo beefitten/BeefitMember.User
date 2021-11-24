@@ -4,9 +4,8 @@ using System.Net;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Services.Security;
 using Domain.Services.Users.Models;
-using Domain.Setup;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
 using Persistence.Models.User;
@@ -17,14 +16,16 @@ namespace Domain.Services.Users
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly ISecurity _security;
 
         private static readonly string SECRET_KEY = AppConfig.GetSecretKey();
         public static readonly SymmetricSecurityKey SIGNING_KEY = new
             SymmetricSecurityKey(Encoding.UTF8.GetBytes(SECRET_KEY));
             
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, ISecurity security)
         {
             _userRepository = userRepository;
+            _security = security;
         }
         
         public async Task<HttpStatusCode> Register(RegisterModel model)
@@ -48,7 +49,7 @@ namespace Domain.Services.Users
                 Issuer = model.PaymentInfo.Issuer
             };
             
-            userModel.Password = HashPassword(model.Password);
+            userModel.Password = _security.HashAndSaltPassword(model.Password);
 
             return await _userRepository.Register(userModel);
         }
@@ -68,8 +69,8 @@ namespace Domain.Services.Users
                     StatusCode = UserServiceResults.Error.ToString()
                 };
             }
-            
-            var authenticateResult = BCrypt.Net.BCrypt.Verify(password, account.Password);
+
+            var authenticateResult = _security.VerifyPassword(password, account.Password);
 
             if (authenticateResult)
             {
@@ -109,12 +110,6 @@ namespace Domain.Services.Users
         public async Task<HttpStatusCode> RemoveUser(string email)
         {
             return await _userRepository.RemoveUser(email);
-        }
-
-        private string HashPassword(string password)
-        {
-            var salt = BCrypt.Net.BCrypt.GenerateSalt(10);
-            return BCrypt.Net.BCrypt.HashPassword(password, salt);
         }
 
         private string GenerateToken(string username, string role)

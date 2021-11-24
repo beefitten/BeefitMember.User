@@ -1,5 +1,6 @@
 ﻿using System.Net.Http;
 using Domain.Services.FitnessPackage;
+using Domain.Services.Security;
 using Domain.Services.Users;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Repositories.User;
@@ -14,6 +15,7 @@ namespace Domain.Setup
                 .AddTransient<IUserService, UserService>()
                 .AddTransient<IUserRepository, UserRepository>()
                 .AddTransient<IFitnessPackageClient, FitnessPackageClient>()
+                .AddTransient<ISecurity, Security>()
                 .AddTransient<HttpClient>();
 
             return services;
