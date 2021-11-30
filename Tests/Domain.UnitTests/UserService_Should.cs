@@ -7,14 +7,13 @@ using Domain.Services.Users.Models;
 using Moq;
 using Persistence.Models.User;
 using Persistence.Repositories.User;
-using Tests.Setup;
 using Xunit;
 
 namespace Tests.Domain.UnitTests
 {
     public class UserService_Should
     {
-        [Theory, AutoDomainAttribute]
+        [Theory, AutoData]
         public async Task Register_Return_100_On_User_Created(
             [Frozen] Mock<IUserRepository> userRepositoryMock,
             [Frozen] Mock<ISecurity> securityMock,

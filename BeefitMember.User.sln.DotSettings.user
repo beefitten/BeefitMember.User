@@ -1,11 +1,11 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CSkole_005C7_002E_0020semester_005CBachelor_005CGit_005CBeefitMember_002EUser_005CPersistence_005CWeb_002Econfig/@EntryIndexedValue">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1c2cd7df_002Dbd82_002D4bf6_002D9657_002D51987d1a7064/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Register_Invoke_UserRepository #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1c2cd7df_002Dbd82_002D4bf6_002D9657_002D51987d1a7064/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Register_Invoke_UserRepository #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad5a0770_002D26fc_002D4700_002D8401_002Da02d415569a5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Register_Invoke_UserRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad5a0770_002D26fc_002D4700_002D8401_002Da02d415569a5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Register_Invoke_UserRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should.Register_HashPassword&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::05350619-DFD6-4694-B4E4-DFAEB70F1E68::net5.0::Tests.Domain.UnitTests.UserService_Should.Register_Return_200_On_User_Created&lt;/TestId&gt;&#xD;

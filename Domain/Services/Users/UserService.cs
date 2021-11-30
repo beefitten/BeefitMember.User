@@ -117,7 +117,8 @@ namespace Domain.Services.Users
             var token = new JwtSecurityToken(
                 claims:    new Claim[] { 
                     new Claim(ClaimTypes.Name, username), 
-                    new Claim(ClaimTypes.Role, role)
+                    new Claim(ClaimTypes.Role, role),
+                    new Claim("Role", role)
                 },
                 notBefore: new DateTimeOffset(DateTime.Now).DateTime,
                 expires:   new DateTimeOffset(DateTime.Now.AddMinutes(60)).DateTime,

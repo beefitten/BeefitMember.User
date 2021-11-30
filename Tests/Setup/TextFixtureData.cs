@@ -2,6 +2,7 @@
 using Domain.Setup;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence;
+using RestAPI.Setup;
 
 namespace Tests.Setup
 {
@@ -14,6 +15,7 @@ namespace Tests.Setup
             ServiceProvider = new ServiceCollection()
                 .AddPersistence()
                 .AddDomain()
+                .AddRestAPI()
                 .BuildServiceProvider();
         }
     }

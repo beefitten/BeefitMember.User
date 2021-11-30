@@ -25,6 +25,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
       <ProjectReference Include="..\Persistence\Persistence.csproj" />
+      <ProjectReference Include="..\RestAPI\RestAPI.csproj" />
     </ItemGroup>
 
 </Project>
