@@ -75,7 +75,7 @@ namespace RestAPI
                 }); 
             });
 
-            services.AddRestAPI();
+            //services.AddRestAPI();
             services.AddDomain();
             services.AddPersistence();
 

@@ -56,7 +56,7 @@ namespace RestAPI.Controllers
                 return Conflict();
 
             if (user.StatusCode == UserServiceResults.IncorrectPassword.ToString())
-                return NotFound();
+                return Unauthorized();
             
             var fitnessInformation = await _client.GetFitnessPackage(user.PrimaryGym, user.Token);
             

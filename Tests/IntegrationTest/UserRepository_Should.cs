@@ -3,6 +3,7 @@ using AutoFixture.Xunit2;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Models.User;
 using Persistence.Repositories.User;
+using Shouldly;
 using Tests.Setup;
 using Xunit;
 
@@ -26,6 +27,7 @@ namespace Tests.Persistence.UnitTests
             var response = await _userRepository.FindUser(userModel.Email);
             
             Assert.NotNull(response);
+
             Assert.Equal(userModel.Email, response.Email);
             Assert.Equal(userModel.Password, response.Password);
             Assert.Equal(userModel.Subscription, response.Subscription);
