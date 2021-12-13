@@ -3,7 +3,6 @@ using AutoFixture.Xunit2;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Models.User;
 using Persistence.Repositories.User;
-using Shouldly;
 using Tests.Setup;
 using Xunit;
 

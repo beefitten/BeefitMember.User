@@ -23,7 +23,7 @@ namespace Tests.Domain.UnitTests
         {
             userRepositoryMock
                 .Setup(x => x.Register(model))
-                .ReturnsAsync(HttpStatusCode.OK);
+                .ReturnsAsync(() => HttpStatusCode.OK);
             
             securityMock
                 .Setup(x => x.HashAndSaltPassword(model.Password))

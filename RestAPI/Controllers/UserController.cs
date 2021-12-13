@@ -1,5 +1,4 @@
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Domain.Services.FitnessPackage;
 using Domain.Services.Users;
@@ -7,7 +6,6 @@ using Domain.Services.Users.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Models.User;
-using UserReturnModel = Persistence.Models.User.UserReturnModel;
 
 namespace RestAPI.Controllers
 {
